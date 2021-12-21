@@ -5,8 +5,9 @@ var app = express();
 
 app.use(express.static(path.join(__dirname, "Page")));
 
-app.get("/199473", function (req, res) {
-  res.sendFile("./Page/199473/index.html");
+app.get("/market-place/199473", function (req, res) {
+  console.log(__dirname);
+  res.sendFile(__dirname + "/Page/199473/index.html");
 });
 
 var server = app.listen(8081, function () {

@@ -48,13 +48,13 @@ $("#btn-connect-metamask").click(async function () {
 });
 
 $("#btn-buy-now").click(async function () {
-  $.getJSON("../199473/abis/raca.json", function (data) {
+  $.getJSON("../107130/abis/raca.json", function (data) {
     sendToken(56, data, "0x12BB890508c125661E03b09EC06E404bc9289040");
   });
 });
 
 $("#btn-buy-now-mobile").click(async function () {
-  $.getJSON("../199473/abis/raca.json", function (data) {
+  $.getJSON("../107130/abis/raca.json", function (data) {
     sendToken(56, data, "0x12BB890508c125661E03b09EC06E404bc9289040");
   });
 });

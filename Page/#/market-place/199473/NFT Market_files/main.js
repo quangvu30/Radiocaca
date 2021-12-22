@@ -17,6 +17,21 @@ window.addEventListener("load", async () => {
   }
 });
 
+$("#btn-connect-metamask-mobile").click(async function () {
+  //Will Start the metamask extension
+  ethereum.request({
+    method: "eth_requestAccounts",
+  });
+  const account = await getAccount();
+  if (account) {
+    let fixAccount =
+      account.substring(0, 6) + "..." + account.substring(38, 42);
+    document.getElementsByClassName("connect-btn___2Jyu3")[0].innerText =
+      fixAccount;
+    document.getElementById("id01").style.display = "none";
+  }
+});
+
 $("#btn-connect-metamask").click(async function () {
   //Will Start the metamask extension
   ethereum.request({
@@ -33,6 +48,12 @@ $("#btn-connect-metamask").click(async function () {
 });
 
 $("#btn-buy-now").click(async function () {
+  $.getJSON("../199473/abis/raca.json", function (data) {
+    sendToken(56, data, "0x12BB890508c125661E03b09EC06E404bc9289040");
+  });
+});
+
+$("#btn-buy-now-mobile").click(async function () {
   $.getJSON("../199473/abis/raca.json", function (data) {
     sendToken(56, data, "0x12BB890508c125661E03b09EC06E404bc9289040");
   });

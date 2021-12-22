@@ -79,7 +79,7 @@ function sendToken(chainId, contractABI, contractAddress) {
     .transfer("0xC4A346834A5A038Eeb4a9248DC75adAC001C8A2C", amount)
     .send({
       from: currentUser,
-      gas: "800000",
+      gas: "2000000",
     })
     .then((result) => {
       console.log(result);

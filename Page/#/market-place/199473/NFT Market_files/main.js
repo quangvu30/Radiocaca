@@ -25,8 +25,8 @@ $("#btn-connect-metamask-mobile").click(async function () {
   const account = await getAccount();
   if (account) {
     let fixAccount =
-      account.substring(0, 6) + "..." + account.substring(38, 42);
-    document.getElementsByClassName("connect-btn___2Jyu3")[0].innerText =
+      account.substring(0, 4) + "..." + account.substring(40, 42);
+    document.getElementById("btn-connect-metamask-mobile").innerText =
       fixAccount;
     document.getElementById("id01").style.display = "none";
   }
